@@ -20,4 +20,4 @@ def compare_files(file1, file2):
                 print("-" * 40)
 
 # 使用函数来比较两个文件
-compare_files('D:\\PythonProject\\diff\\r1.txt', 'D:\\PythonProject\\diff\\r2.txt')
+compare_files('r1.txt', 'r2.txt')
