@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c69c93a-1fcc-4807-b618-bc1f95a0c8a9" name="更改" comment="Initial commit">
-      <change afterPath="$PROJECT_DIR$/数据分析/1.0.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/数据分析/2.0.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/数据分析/data.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/数据分析/data.xlsx" afterDir="false" />
-    </list>
+    <list default="true" id="8c69c93a-1fcc-4807-b618-bc1f95a0c8a9" name="更改" comment="Initial commit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -263,7 +258,7 @@
       <workItem from="1740699242543" duration="4114000" />
       <workItem from="1740724779238" duration="4244000" />
       <workItem from="1740975685194" duration="3724000" />
-      <workItem from="1741065210165" duration="15666000" />
+      <workItem from="1741065210165" duration="16147000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -369,7 +364,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739847788292</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Initial commit">
+      <option name="closed" value="true" />
+      <created>1741165089013</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1741165089013</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -404,6 +407,6 @@
     <SUITE FILE_PATH="coverage/PythonProject$test.coverage" NAME="test 覆盖结果" MODIFIED="1739845848431" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/文本对比" />
     <SUITE FILE_PATH="coverage/PythonProject$1_0.coverage" NAME="1.0 覆盖结果" MODIFIED="1741152544996" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/数据分析" />
     <SUITE FILE_PATH="coverage/PythonProject$diff_text.coverage" NAME="diff_text 覆盖结果" MODIFIED="1739844325695" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/diff" />
-    <SUITE FILE_PATH="coverage/PythonProject$2_0.coverage" NAME="2.0 覆盖结果" MODIFIED="1741158263632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/数据分析" />
+    <SUITE FILE_PATH="coverage/PythonProject$2_0.coverage" NAME="2.0 覆盖结果" MODIFIED="1741164871502" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/数据分析" />
   </component>
 </project>
