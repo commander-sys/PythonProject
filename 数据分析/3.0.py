@@ -24,15 +24,23 @@ DCGW.loc[:, "流量使用率/%"] = pd.to_numeric(DCGW["流量使用率/%"], erro
 DCGW.loc[:, "包量峰值/Wpps"] = pd.to_numeric(DCGW["包量峰值/Wpps"], errors='coerce')
 DCGW.loc[:, "包量使用率/%"] = pd.to_numeric(DCGW["包量使用率/%"], errors='coerce')
 
-# 打印非关基区DCGW专线网关流量、包量峰值
-print("非关基区DCGW专线网关流量、包量峰值如下：")
-print("集群流量峰值为：", str(max(DCGW["流量峰值/Gbps"])) + "Gbps", "流量使用率为：", str(max(DCGW["流量使用率/%"]) * 100) + "%", "峰值时间为：", max(DCGW["流量峰值时间"]))
-print("集群包量峰值为：", str(max(DCGW["包量峰值/Wpps"])) + "Wpps", "包量使用率为：", str(max(DCGW["包量使用率/%"]) * 100) + "%")
+# # 打印非关基区DCGW专线网关流量、包量峰值
+# print("非关基区DCGW专线网关流量、包量峰值如下：")
+max_traffic = max(DCGW["流量峰值/Gbps"])  # 15
+max_traffic_row = DCGW[DCGW["流量峰值/Gbps"] == max_traffic]
+# max_sum = str(max(max_traffic_row["流量使用率/%"].values[0] * 100, max_traffic_row["包量使用率/%"].values[0] * 100)) + "%"
 
-# 找到流量峰值最大的集群
-max_dcgw_traffic = max(DCGW["流量使用率/%"])
-max_dcgw_packets = max(DCGW["包量使用率/%"])
-if max_dcgw_traffic > max_dcgw_packets:
-    print("最忙集群为：", DCGW[DCGW["流量使用率/%"] == max_dcgw_traffic]["流量使用率/%"].values[0])
-else:
-    print("最忙集群为：", DCGW[DCGW["包量使用率/%"] == max_dcgw_packets]["包量使用率/%"].values[0])
+# print(type(max_sum))
+# print("集群带宽峰值：", str(max_traffic) + "Gbps",
+#       "容量使用率：",str(max_traffic_row["流量使用率/%"].values[0] * 100) + "%",
+#       "云实例名称:",max_traffic_row["云实例"].values[0],"集群/对象名称:",
+#       "公共集群")
+
+# 打印非关基区XGW专线网关流量、包量峰值
+# print("非关基区XGW专线网关流量、包量峰值如下：")
+# max_packets = max(DCGW["包量峰值/Wpps"])  # 15
+# max_packets_row = DCGW[DCGW["包量峰值/Wpps"] == max_packets]
+# print("集群带宽峰值：", str(max_packets) + "Wpps","容量使用率：",
+#       str(max_packets_row["包量使用率/%"].values[0] * 100) + "%","云实例名称:",
+#       max_packets_row["云实例"].values[0],"集群/对象名称:", "公共集群","峰值时间:",
+#       max_packets_row["包量峰值时间"].values[0])
