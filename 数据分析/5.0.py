@@ -4,7 +4,8 @@ import pandas as pd
 filename = "data.xlsx"
 # 读取Excel文件到DataFrame
 df = pd.read_excel(filename)
-
+result = df[(df["云实例"] == "自用北京零区、三区") & (df["网关类型"] == "DCGW")]
+print(result.values)
 # 筛选符合条件的行
 DCGW = df[df['云实例'].astype(str).isin(["自用北京零区、三区", "自用信创北京一区、二区"]) & (df['网关类型'] == "DCGW")]
 
@@ -28,6 +29,4 @@ else:
 # 筛选最忙集群
 s = DCGW.loc[DCGW[ZM_JQ1] == ZM_JQ2, :]
 
-# 输出结果
-print("最忙集群的详细信息：")
-print(s)
+
