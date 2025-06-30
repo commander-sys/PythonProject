@@ -9,6 +9,7 @@ def compare_files(file1, file2):
         max_lines = max(len(lines1), len(lines2))
 
         # 比较文件的每一行
+        
         for i in range(max_lines):
             line1 = lines1[i] if i < len(lines1) else ""
             line2 = lines2[i] if i < len(lines2) else ""
