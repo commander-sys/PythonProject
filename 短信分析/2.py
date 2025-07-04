@@ -34,9 +34,17 @@ ip_pattern = r"\b(?:\d{1,3}\.){3}\d{1,3}\b"
 
 # 从包含“XGW”的短信中提取IP地址
 dc_bj_xgw = dc_bj[dc_bj["Content"].str.contains("XGW|xgw", regex=True, na=False)]
+dc_bj_dcgw = dc_bj[dc_bj["Content"].str.contains("DCGW", regex=True, na=False)]
+dc_bj_dcgwnat = dc_bj[dc_bj["Content"].str.contains("DCGWNAT", regex=True, na=False)]
+dc_bj_sxgw = dc_bj[dc_bj["Content"].str.contains("SXGW", regex=True, na=False)]
+
 ip_series = dc_bj_xgw["Content"].str.extractall(f"({ip_pattern})")[0]
 
 # 统计出现次数最多的前10个IP地址
 top_10_ip = ip_series.value_counts().head(10)
 
-print(top_10_ip)
+with pd.ExcelWriter(w_f_name) as writer:
+    dc_bj_xgw.to_excel(writer, sheet_name="dc_bj_xgw", index=False)
+    dc_bj_dcgw.to_excel(writer, sheet_name="dc_bj_dcgw", index=False)
+    dc_bj_dcgwnat.to_excel(writer, sheet_name="dc_bj_dcgwnat", index=False)
+    dc_bj_sxgw.to_excel(writer, sheet_name="dc_bj_sxgw", index=False)
